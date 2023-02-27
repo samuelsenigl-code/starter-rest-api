@@ -60,6 +60,11 @@ app.get('/:col', async (req, res) => {
   res.json(items).end()
 })
 
+// Get a full listing
+app.get('/songs', async (req, res) => {
+  res.json({ msg: 'EYYYYY' }).end()
+})
+
 // Catch all handler for all other request.
 app.use('*', (req, res) => {
   res.json({ msg: 'no route handler found' }).end()
