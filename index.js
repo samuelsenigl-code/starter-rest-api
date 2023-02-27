@@ -1,6 +1,19 @@
 const express = require('express')
+var mysql = require("mysql")
 const app = express()
 const db = require('@cyclic.sh/dynamodb')
+
+let connection = mysql.createConnection({
+    host: 'sql4.webzdarma.cz',
+    user: 'sizejwzcz5371',
+    password: 'sizejwzcz5371',
+    database: '72A%6$9QXTcOkd*,5.DM'
+});
+
+connection.connect(function(err) {
+  if (err) throw err;
+  console.log("Connected!");
+});
 
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
