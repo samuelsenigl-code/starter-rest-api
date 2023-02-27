@@ -15,7 +15,9 @@
   },
   "dependencies": {
     "@cyclic.sh/dynamodb": "^0.0.33",
+    "aws-sdk": "^2.1323.0",
     "env-cmd": "^10.1.0",
-    "express": "^4.18.1"
+    "express": "^4.18.1",
+    "mysql": "^2.18.1"
   }
 }
