@@ -126,6 +126,25 @@ app.get('/songs', async (req, res) => {
     res.json(worships).end()
 })
 
+// Get a full listing of playlists
+app.get('/playlists', async (req, res) => {
+    const playlists = [
+            {id: 3, datum:"25. září 2022", sestava: "Všichni", poznamka: "-", chvaly: "10 000 důvodů, Bůh náš neotřesitelný, Closer, Duchu Svatý jsi tu vítaný"},
+            {id: 3, datum:"18. září 2022", sestava: "Sam a Markétka", poznamka: "Zkouška začíná až v 8:30", chvaly: "Ježíš přítel hříšných, Above All, Jsi Cesta, Hledám Tvoji tvář"},
+            {id: 3, datum:"11. září 2022", sestava: "Sam, Markétka a Grace", poznamka: "Zkusíme jednu úplně novou chválu", chvaly: "Já tě chci více znát, Ježíš je jméno nad každé jméno, Jsem nový, Jsi světem mým, Nikdy nekončíci milost"}
+    ];
+    res.json(playlists).end()
+})
+
+// Get a full listing of tasks
+app.get('/tasks', async (req, res) => {
+    const tasks = [
+            {id: 3, nadpis:"Naučit se bridge k Jsi cesta", datum: "20.8.2022", sdilen: "Samuel Šenigl, Markéta Šeniglová", stav: "čeká na splnění"},
+            {id: 3, nadpis:"Cvičit vyhrávku k 10 000 Reasons", datum: "1.9.2022", sdilen: "Samuel Šenigl", stav: "hotový"},
+    ];
+    res.json(tasks).end()
+})
+
 // Create or Update an item
 app.post('/:col/:key', async (req, res) => {
   console.log(req.body)
