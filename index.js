@@ -22,8 +22,16 @@ app.use(express.urlencoded({ extended: true }))
 // Get a full listing of songs
 app.get('/songs', async (req, res) => {
     const worships = [
-        { name: 'Jane Doe', subscriber: false },
-        { name: 'John Doe', subscriber: true }
+        	{
+        		"id": 123,
+        		"name": "10 000 důvodů",
+        		"author": "Matt Redman",
+        		"content": "Chval Ho [F]o duše [C]má, [G]o duše [Am]má[br] [F]Uctívá [C]jméno [G]Tvé[br] Ze vší [F]síly [Am]zpívá, [F]du[G]še [Am]má[br] Uctí[F]vá jméno [G]Tvé [C][br] [br] [F] [C] [G] [Am]/[C][br] Slunce vychází, nový den začíná[br] Je čas zpívat Tvou píseň zas[br] Cokoli se může stát a cokoli leží za mnou[br] Já budu zpívat, než zas přijde noc[br] [br] [F] [C] [G] [Am]/[C][br] Jsi štědrý v lásce a mírný v hněvu[br] Máš velké jméno, jsi laskavý[br] Pro Tvou dobrotu já budu stále zpívat[br] Tisíce důvodů mé srdce má[br] [br] [F] [C] [G] [Am]/[C][br] A až přijde den, kdy má síla zeslábne[br] Budu blíž konci, až přijde můj čas[br] Stejně má duše bude zpívat Ti chválu[br] Tisíce let Tě chválit napořád[br]",
+        		"notes": "",
+        		"capo": 0,
+        		"recording": "null",
+        		"team": "1"
+        	}
     ];
     res.json(worships).end()
 })
