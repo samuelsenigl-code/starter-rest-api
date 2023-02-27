@@ -19,6 +19,11 @@ app.use(express.urlencoded({ extended: true }))
 // app.use(express.static('public', options))
 // #############################################################################
 
+// Get a full listing of songs
+app.get('/songs', async (req, res) => {
+  res.json({ msg: 'EYYYYY' }).end()
+})
+
 // Create or Update an item
 app.post('/:col/:key', async (req, res) => {
   console.log(req.body)
@@ -58,11 +63,6 @@ app.get('/:col', async (req, res) => {
   const items = await db.collection(col).list()
   console.log(JSON.stringify(items, null, 2))
   res.json(items).end()
-})
-
-// Get a full listing
-app.get('/songs', async (req, res) => {
-  res.json({ msg: 'EYYYYY' }).end()
 })
 
 // Catch all handler for all other request.
