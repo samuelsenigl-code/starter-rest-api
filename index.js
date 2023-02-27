@@ -21,7 +21,11 @@ app.use(express.urlencoded({ extended: true }))
 
 // Get a full listing of songs
 app.get('/songs', async (req, res) => {
-  res.json({ msg: 'EYYYYY' }).end()
+    const worships = [
+        { name: 'Jane Doe', subscriber: false },
+        { name: 'John Doe', subscriber: true }
+    ];
+    res.json(worships).end()
 })
 
 // Create or Update an item
